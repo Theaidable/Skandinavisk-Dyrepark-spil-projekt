@@ -187,10 +187,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sealStandard: {fileID: -6679789379602070221, guid: bb3121d7eb1e56d47b69f2f7ad592ea8, type: 3}
+  sealStandardHit: {fileID: -4242683527800785286, guid: a3952b1eb44f64447b9a63284208591f, type: 3}
+  polarbear: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
+  polarBearHit: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
   startPosition: {x: 0.1, y: -0.4}
   endPosition: {x: 0.1, y: 0.7}
   showDuration: 0.5
   duration: 1
+  sealStandardSpawnRate: 0.75
+  polarbearSpawnRate: 0.25
 --- !u!1 &7556702595969453036
 GameObject:
   m_ObjectHideFlags: 0
