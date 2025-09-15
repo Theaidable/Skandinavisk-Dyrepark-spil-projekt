@@ -34,7 +34,7 @@ public class Seal : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
 
     //Seal parametre
-    private bool hittable = true;
+    private bool hittable;
     private SpawnType spawnType;
 
     private void Awake()
