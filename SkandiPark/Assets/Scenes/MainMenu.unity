@@ -936,11 +936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b39aa329ed32274293e34e573528c1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PolarBearButton: {fileID: 0}
-  "Hav\xF8rnButton": {fileID: 0}
-  WolfButton: {fileID: 0}
-  BrownBearButton: {fileID: 0}
-  Button_Play: {fileID: 0}
+  PolarBearButton: {fileID: 101989346}
+  "Hav\xF8rnButton": {fileID: 1984083322}
+  WolfButton: {fileID: 2084832063}
+  BrownBearButton: {fileID: 1270319681}
+  Button_Play: {fileID: 2103293605}
 --- !u!1 &1270319679
 GameObject:
   m_ObjectHideFlags: 0

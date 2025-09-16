@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,6 +13,8 @@ public class MainMenuUI : MonoBehaviour
     [Header("Start Button")]
     public Button Button_Play;
 
+    public static string selectedAnimal; //Så det husker hvilket dyr som blev valgt, ift. scene skift.
+
     private Button selectedButton;
 
     private void Start()
@@ -21,16 +22,16 @@ public class MainMenuUI : MonoBehaviour
         Button_Play.interactable = false; //Låsning af start knappen inden man vælger et af dyrene.
 
         //Lytter efter klik på knapperne med dyrene.
-        PolarBearButton.onClick.AddListener(() => SelectAnimal(PolarBearButton));
-        HavørnButton.onClick.AddListener(() => SelectAnimal(HavørnButton));
-        WolfButton.onClick.AddListener(() => SelectAnimal(WolfButton));
-        BrownBearButton.onClick.AddListener(() => SelectAnimal(BrownBearButton));
+        PolarBearButton.onClick.AddListener(() => SelectAnimal(PolarBearButton, "PolarBear"));
+        HavørnButton.onClick.AddListener(() => SelectAnimal(HavørnButton, "Havørn"));
+        WolfButton.onClick.AddListener(() => SelectAnimal(WolfButton, "Wolf"));
+        BrownBearButton.onClick.AddListener(() => SelectAnimal(BrownBearButton, "BrownBear"));
 
         //Lytter efter knappen af start.
         Button_Play.onClick.AddListener(StartGame);
     }
 
-    private void SelectAnimal(Button chosenButton)
+    private void SelectAnimal(Button chosenButton, string animalName)
     {
         //Nulstilling af farverne på knapperne.
         ResetColors();
@@ -61,7 +62,7 @@ public class MainMenuUI : MonoBehaviour
         if (selectedButton != null)
         {
             Debug.Log("Starter spil med: " + selectedButton.name);
-            SceneManager.LoadScene("GameScene");
+            SceneManager.LoadScene("SampleScene");
         }
     }
 }
