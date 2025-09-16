@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Sep 15, 2025, 11_07_47 AM_0
+      name: SealHappy1
       rect:
         serializedVersion: 2
         x: 136
@@ -147,7 +147,7 @@ TextureImporter:
         width: 864
         height: 937
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 08a8a6e8103c450449ba48b9b95047dd
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Sep 15, 2025, 11_07_47 AM_0: -6679789379602070221
+      SealHappy1: -6679789379602070221
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
