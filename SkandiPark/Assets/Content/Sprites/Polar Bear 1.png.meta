@@ -145,15 +145,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Sep 15, 2025, 11_19_12 AM_0
+      name: PolarBear1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 136
         y: 57
-        width: 989
-        height: 962
+        width: 864
+        height: 937
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -175,7 +175,7 @@ TextureImporter:
         width: 6
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -197,7 +197,7 @@ TextureImporter:
         width: 7
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -214,7 +214,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: cdaf642b2a4fa184faba3a1863d87978
     internalID: 0
     vertices: []
     indices: 
@@ -224,9 +224,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Sep 15, 2025, 11_19_12 AM_0: -8349362767631358238
       ChatGPT Image Sep 15, 2025, 11_19_12 AM_1: -3613549934573540329
       ChatGPT Image Sep 15, 2025, 11_19_12 AM_2: 4946882477734375467
+      PolarBear1: -8349362767631358238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

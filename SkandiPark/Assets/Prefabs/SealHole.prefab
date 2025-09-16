@@ -98,6 +98,8 @@ GameObject:
   - component: {fileID: 4121499183862156545}
   - component: {fileID: 3859016488420511202}
   - component: {fileID: 8303775996065495462}
+  - component: {fileID: 1085124157386027429}
+  - component: {fileID: 6916144602219261321}
   m_Layer: 0
   m_Name: Seal
   m_TagString: Untagged
@@ -187,10 +189,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardSeal: {fileID: -6679789379602070221, guid: bb3121d7eb1e56d47b69f2f7ad592ea8, type: 3}
+  standardSealHit: {fileID: -4242683527800785286, guid: a3952b1eb44f64447b9a63284208591f, type: 3}
+  polarbear: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
+  polarBearHit: {fileID: 509522885810088478, guid: 391bfb1445336e441bf39cb44037fcd2, type: 3}
   startPosition: {x: 0.1, y: -0.4}
   endPosition: {x: 0.1, y: 0.7}
   showDuration: 0.5
   duration: 1
+  nextDelayRange: {x: 0, y: 2}
+  standardSealSpawnRate: 0.75
+  polarbearSpawnRate: 0.25
+--- !u!61 &1085124157386027429
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762408417020023031}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.5, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 8.64, y: 9.37}
+    newSize: {x: 8.64, y: 9.37}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 8, y: 8}
+  m_EdgeRadius: 0
+--- !u!114 &6916144602219261321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4762408417020023031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed52fcd9e7dd67498cae3252a616c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
+  _hitMask:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &7556702595969453036
 GameObject:
   m_ObjectHideFlags: 0
