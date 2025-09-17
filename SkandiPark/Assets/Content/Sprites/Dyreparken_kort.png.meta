@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cad3e0491023a6b4fb0fa49fb4e4fdcd
+guid: 40350a10a3990db4ebb93bd3de39e800
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8938605748204333980
-    second: App_billede_07_0
+      213: -1632114379400671396
+    second: Dyreparken_kort_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: App_billede_07_0
+      name: Dyreparken_kort_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 501
-        height: 910
+        width: 1080
+        height: 1920
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9bebf8b19e4c0c70800000000000000
-      internalID: 8938605748204333980
+      spriteID: c5f04078e909959e0800000000000000
+      internalID: -1632114379400671396
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      App_billede_07_0: 8938605748204333980
+      Dyreparken_kort_0: -1632114379400671396
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
