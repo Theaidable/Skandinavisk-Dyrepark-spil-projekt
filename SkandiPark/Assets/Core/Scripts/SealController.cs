@@ -38,10 +38,14 @@ public class SealController : MonoBehaviour
     private bool hittable;
     private int hitpoints;
 
+    private UIManagerGameOne uiManager;
+
     private void Awake()
     {
         //References
         _spriteRenderer = GetComponent<SpriteRenderer>();
+
+        uiManager = FindFirstObjectByType<UIManagerGameOne>();
     }
 
     private void OnEnable()
@@ -70,6 +74,15 @@ public class SealController : MonoBehaviour
         if(hitpoints == 0)
         {
             hittable = false;
+
+            if (_spawnType == SpawnType.Standard)
+            {
+                uiManager.UpdateScore(10); //10 points for en sæl.
+            }
+            else if (_spawnType == SpawnType.Polarbear)
+            {
+                uiManager.UpdateScore(-5); //-5 points for en isbjørn.
+            }
         }
     }
 

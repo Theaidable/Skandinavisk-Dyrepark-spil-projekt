@@ -5,6 +5,6 @@ public class MapUI : MonoBehaviour
 {
     public void OpenPolarBearGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SkandiPark");
     }
 }

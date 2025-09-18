@@ -33,7 +33,7 @@ public class UIManagerGameOne : MonoBehaviour
         if (pauseMenu) pauseMenu.SetActive(false);
         if (tryAgainMenu) tryAgainMenu.SetActive(false);
 
-        scoreText.text = "Score: 0";
+        scoreText.text = "0";
         timerText.text = Mathf.CeilToInt(timeLeft).ToString();
     }
 
