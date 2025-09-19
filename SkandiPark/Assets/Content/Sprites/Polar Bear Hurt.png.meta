@@ -3,8 +3,8 @@ guid: ea8254c395399b54cba9cacd86b2183f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7278216597205915984
-    second: ChatGPT Image Sep 19, 2025, 11_08_38 AM_0
+      213: -5462502025361819616
+    second: Polar Bear Hurt_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Sep 19, 2025, 11_08_38 AM_0
+      name: Polar Bear Hurt_0
       rect:
         serializedVersion: 2
         x: 17
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b6603501949efa90800000000000000
-      internalID: -7278216597205915984
+      spriteID: 028f479795b4134b0800000000000000
+      internalID: -5462502025361819616
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Sep 19, 2025, 11_08_38 AM_0: -7278216597205915984
+      Polar Bear Hurt_0: -5462502025361819616
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
