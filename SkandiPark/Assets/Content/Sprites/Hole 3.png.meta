@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Sep 15, 2025, 11_05_47 AM_0
+      name: Hole 3
       rect:
         serializedVersion: 2
         x: 31
@@ -147,7 +147,7 @@ TextureImporter:
         width: 957
         height: 811
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 56015826adb37f44b818d1cd7f581a34
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image Sep 15, 2025, 11_05_47 AM_0: -7272969775590103465
+      Hole 3: -7272969775590103465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
