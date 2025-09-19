@@ -592,6 +592,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SealHole (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: polarBearHit
+      value: 
+      objectReference: {fileID: -5462502025361819616, guid: ea8254c395399b54cba9cacd86b2183f, type: 3}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: standardSealHit
+      value: 
+      objectReference: {fileID: 1436501906964270941, guid: c21fd4aec7af6e947b871247619e418f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -728,6 +736,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: SealHole (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: polarBearHit
+      value: 
+      objectReference: {fileID: -5462502025361819616, guid: ea8254c395399b54cba9cacd86b2183f, type: 3}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: standardSeal
+      value: 
+      objectReference: {fileID: -6679789379602070221, guid: bb3121d7eb1e56d47b69f2f7ad592ea8, type: 3}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: standardSealHit
+      value: 
+      objectReference: {fileID: 1436501906964270941, guid: c21fd4aec7af6e947b871247619e418f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2804,6 +2824,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SealHole
       objectReference: {fileID: 0}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: polarBearHit
+      value: 
+      objectReference: {fileID: -5462502025361819616, guid: ea8254c395399b54cba9cacd86b2183f, type: 3}
+    - target: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+      propertyPath: standardSealHit
+      value: 
+      objectReference: {fileID: 1436501906964270941, guid: c21fd4aec7af6e947b871247619e418f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
