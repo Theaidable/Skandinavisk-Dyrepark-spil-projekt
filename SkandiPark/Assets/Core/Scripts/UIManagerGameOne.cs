@@ -44,7 +44,6 @@ public class UIManagerGameOne : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1f;
         timeLeft = timeLimitSeconds;
 
         AudioManager.Instance?.PlayBackgroundMusic();
@@ -54,7 +53,7 @@ public class UIManagerGameOne : MonoBehaviour
         if (pauseMenu) pauseMenu.SetActive(false);
         if (tryAgainMenu) tryAgainMenu.SetActive(false);
 
-        scoreText.text = "0";
+        scoreText.text = "Score 0";
         timerText.text = Mathf.CeilToInt(timeLeft).ToString();
     }
 
@@ -75,7 +74,7 @@ public class UIManagerGameOne : MonoBehaviour
     {
         if (ended) return;
         score += delta;
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score " + score;
     }
 
     public void PauseGame() //Pause/Resume.
