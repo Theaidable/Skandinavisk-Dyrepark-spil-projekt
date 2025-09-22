@@ -11,13 +11,15 @@ public enum SpawnType
 public class SealController : MonoBehaviour
 {
     [Header("Components")]
-    //Her kan jeg tilføje PlayerInputController components samt andre hvis nødvendigt.
+    [SerializeField] private GraphicsBank gfx;
 
+    /*
     [Header("Graphics")]
     [SerializeField] private Sprite standardSeal;
     [SerializeField] private Sprite standardSealHit;
     [SerializeField] private Sprite polarbear;
     [SerializeField] private Sprite polarBearHit;
+    */
 
     [Header("Positions")]
     [SerializeField] private Vector2 startPosition;
@@ -63,25 +65,32 @@ public class SealController : MonoBehaviour
 
     public void TryHit()
     {
-        if(hittable == false)
+        if(hittable == true && UIManagerGameOne.InputLocked == false)
         {
-            return;
-        }
+            hitpoints = Mathf.Max(0, hitpoints - 1);
+            _spriteRenderer.sprite = _spawnType == SpawnType.Polarbear ? gfx.polarBearHit : gfx.standardSealHit;
 
-        hitpoints = Mathf.Max(0, hitpoints - 1);
-        _spriteRenderer.sprite = _spawnType == SpawnType.Polarbear ? polarBearHit : standardSealHit;
-
-        if(hitpoints == 0)
-        {
-            hittable = false;
-
-            if (_spawnType == SpawnType.Standard)
+            if(_spawnType == SpawnType.Standard)
             {
-                uiManager.UpdateScore(10); //10 points for en sæl.
+                AudioManager.Instance?.PlaySealHit();
             }
-            else if (_spawnType == SpawnType.Polarbear)
+            else
             {
-                uiManager.UpdateScore(-5); //-5 points for en isbjørn.
+                AudioManager.Instance?.PlayPolarbearHit();
+            }
+
+            if (hitpoints == 0)
+            {
+                hittable = false;
+
+                if (_spawnType == SpawnType.Standard)
+                {
+                    uiManager.UpdateScore(10); //10 points for en sæl.
+                }
+                else if (_spawnType == SpawnType.Polarbear)
+                {
+                    uiManager.UpdateScore(-5); //-5 points for en isbjørn.
+                }
             }
         }
     }
@@ -99,6 +108,7 @@ public class SealController : MonoBehaviour
             }
 
             CreateNext();
+            AudioManager.Instance?.PlayPopUp();
 
             //Start ved "start"
             transform.localPosition = start;
@@ -146,13 +156,13 @@ public class SealController : MonoBehaviour
         if(random < polarbearSpawnRate)
         {
             _spawnType = SpawnType.Polarbear;
-            _spriteRenderer.sprite = polarbear;
+            _spriteRenderer.sprite = gfx.polarBear;
             hitpoints = 1;
         }
         else
         {
             _spawnType = SpawnType.Standard;
-            _spriteRenderer.sprite = standardSeal;
+            _spriteRenderer.sprite = gfx.standardSeal;
             hitpoints = 1;
         }
 

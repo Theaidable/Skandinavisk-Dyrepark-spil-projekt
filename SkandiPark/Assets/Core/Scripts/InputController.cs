@@ -25,17 +25,40 @@ public class InputController : MonoBehaviour, PlayerControls.IPlayerActions
     {
         _controls.Player.Enable();
         _controls.Player.AddCallbacks(this);
+
+        UIManagerGameOne.OnPaused += HandlePause;
+        UIManagerGameOne.OnResumed += HandleResume;
+        UIManagerGameOne.OnEnded += HandleEnded;
     }
 
     private void OnDisable()
     {
+        UIManagerGameOne.OnPaused -= HandlePause;
+        UIManagerGameOne.OnResumed -= HandleResume;
+        UIManagerGameOne.OnEnded -= HandleEnded;
+
         _controls.Player.Disable();
         _controls.Player.RemoveCallbacks(this);
     }
 
+    private void HandlePause()
+    {
+        _controls.Player.Disable();
+    }
+
+    private void HandleResume()
+    {
+        _controls.Player.Enable();
+    }
+
+    private void HandleEnded()
+    {
+        _controls.Player.Disable();
+    }
+
     public void OnWhack(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && UIManagerGameOne.InputLocked == false)
         {
             Vector2 screenPos = Pointer.current.position.ReadValue();
             Vector2 worldPos = _camera.ScreenToWorldPoint(screenPos);

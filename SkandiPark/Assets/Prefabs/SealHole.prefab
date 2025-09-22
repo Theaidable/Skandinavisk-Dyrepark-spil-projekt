@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 4762408417020023031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0.1, y: -0.4, z: 0}
   m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,10 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardSeal: {fileID: -6679789379602070221, guid: bb3121d7eb1e56d47b69f2f7ad592ea8, type: 3}
-  standardSealHit: {fileID: -4242683527800785286, guid: a3952b1eb44f64447b9a63284208591f, type: 3}
-  polarbear: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
-  polarBearHit: {fileID: 509522885810088478, guid: 391bfb1445336e441bf39cb44037fcd2, type: 3}
+  gfx: {fileID: 11400000, guid: 254228ec7d868684cbee71f5691337e8, type: 2}
   startPosition: {x: 0.1, y: -0.4}
   endPosition: {x: 0.1, y: 0.7}
   showDuration: 0.5
