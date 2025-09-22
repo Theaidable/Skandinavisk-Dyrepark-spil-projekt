@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af794c3f793d264cbd0109faa1dfb98, type: 3}
+  m_Name: SoundBank
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: c54eae21cc6292a4f9b3f20cecf8ebe1, type: 3}
+  musicVolume: 0.3
+  sealHitSfx: {fileID: 8300000, guid: 321a1c46dad0b374781d80014a8d76db, type: 3}
+  polarbeatHitSfx: {fileID: 8300000, guid: f57d7c51b27072d459fbc4de993a86de, type: 3}
+  popUpSfx: {fileID: 8300000, guid: b0bb6015a0318424f9e0068e9f8b2ce2, type: 3}
+  buttonClick: {fileID: 8300000, guid: 04f77c276d0f5574394cecbf58ee4fd7, type: 3}
+  sfxVolume: 0.5

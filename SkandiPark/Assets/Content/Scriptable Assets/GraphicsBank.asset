@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d942dbe29193d948a28ace43ac8b916, type: 3}
+  m_Name: GraphicsBank
+  m_EditorClassIdentifier: 
+  standardSeal: {fileID: -6679789379602070221, guid: bb3121d7eb1e56d47b69f2f7ad592ea8, type: 3}
+  standardSealHit: {fileID: 1436501906964270941, guid: c21fd4aec7af6e947b871247619e418f, type: 3}
+  polarBear: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
+  polarBearHit: {fileID: -5462502025361819616, guid: ea8254c395399b54cba9cacd86b2183f, type: 3}
