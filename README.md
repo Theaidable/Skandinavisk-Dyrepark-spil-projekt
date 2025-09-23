@@ -6,6 +6,7 @@ Alt er bygget med PNG ikoner (ingen tekst på knapperne).
 MMD kan ændre på udseendet direkte i Unity, f.eks udskiftning af billeder, flytte rundt på knapper eller ændre på farve og størrelse på tekster.
 Lydknappen kan også få nye ikoner (sound on/off), og tekster som Score/Timer/Slutresultat kan ændres på under Inspector (farve, font, størrelse, placering).
 Selve funktionerne er kodet, så det visuelle er det eneste de behøver at ændre.
+Vores start scenen er **MapScene** som er kortet over parken og spille scenen er **SkandiPark**.
 
 **UI og menusystemet**
 Delen her er ift. brugerfladen i appen - **StartMenu**, **PauseMenu**, **SettingsMenu**, **TryAgainMenu**.
