@@ -1,4 +1,22 @@
 # Skandinavisk Dyrepark spil projekt
+I denne README fil vil du finde en kort guide til at arbejde videre med "Whack A Seal". README'en forklarer, hvordan du:
+- Ændrer grafik og baggrund via GraphicsBank
+- Opdaterer lyde via SoundBank
+- Redigerer prefabs, og ændrer variabler på de forskellige huller
+- Styrer sværhedsgrad af spillets progression
+- Laver et WebGL build
+## 1. Scener
+Spillet består af 2 scener:
+- MapMenu -> Dette er spillets hovedmenu, hvorfra man starter spillet. I vores tilfælde starter man fra Skandinavisk Dyreparks kort over parken. Hvis man spiller spillet, så skal man klikke på logoet med isbjørnen for at skifte scene til selve spillet
+- SkandiPark -> Dette er scenen med selve "gameplayet"
+### Sådan åbner/skifter du scene
+1. Åbn Project-vinduet og gå til **Assets/Scenes/**
+2. **Dobbeltklik** på **MapMenu** eller **SkandiPark** for at åbne scenen.
+3. Tryk **Play** for at køre den aktuelle scene
+
+
+
+#REDIGERBAR TEKST#
 
 ## Kort overblik over UI.
 Hele menusystemet i spillet består af: **StartMenu**, **PauseMenu**, **SettingsMenu**, **TryAgainMenu**.
@@ -6,7 +24,7 @@ Alt er bygget med PNG ikoner (ingen tekst på knapperne).
 MMD kan ændre på udseendet direkte i Unity, f.eks udskiftning af billeder, flytte rundt på knapper eller ændre på farve og størrelse på tekster.
 Lydknappen kan også få nye ikoner (sound on/off), og tekster som Score/Timer/Slutresultat kan ændres på under Inspector (farve, font, størrelse, placering).
 Selve funktionerne er kodet, så det visuelle er det eneste de behøver at ændre.
-Vores start scenen er **MapScene** som er kortet over parken og spille scenen er **SkandiPark**.
+Vores start scene er **MapScene** som er kortet over parken, og spillets scene er **SkandiPark**.
 
 **UI og menusystemet**
 Delen her er ift. brugerfladen i appen - **StartMenu**, **PauseMenu**, **SettingsMenu**, **TryAgainMenu**.
@@ -19,18 +37,18 @@ Delen her er ift. brugerfladen i appen - **StartMenu**, **PauseMenu**, **Setting
   - **SettingsMenu**: Tilgås fra **StartMenu** og indeholder lydknappen og tilbage til kortet.
 
 - **Knapper**
-  - Alle knapperne som er lavet bruger bare en simpel PNG med et flat design, der er kun brugt billeder, ingen tekst.
+  - Alle knapper som er lavet bruger en simpel PNG med et flat design, hvor der er kun brugt billeder, ingen tekst.
 
-- **Scripts**
+- **Scripts** -> Det her tænker jeg skal slettes
   - **StartMenuController.cs**: Til styringen af **StartMenu** og **SettingsMenu**.
   - **UIManagerGameOne.cs**: Til styringen af **Score**, **Timer**, **PauseMenu** og **TryAgainMenu**.
   - **SoundToggle.cs**: Til styring af om man vælger lyd til eller fra. Ikonet skifter også for at vise om sound er on eller off.
  
 **Hvis der vil ændres i noget af det**
-- **Grafisk**
+- **Grafisk** -> Der skal indsættes billeder i hvert step for at man kan nemt finde rundt
   - Knapper bruger PNG billeder. For at ændre et ikon:
     1. Find knappen du vil ændre i **Hierarchy** (venstre side) og tryk på knappen.
-    2. I **Inspector** (højre side) skal man finde **Image (Script)**.
+    2. I **Inspector** (højre side) skal man finde **Image**.
     3. Udskift billedet med et nyt.
     - Knappernes farve og størrelse kan ændres i **Inspector**. Placering kan ændres med **Move Tool** i Unity ved at trække dem rundt efter tool er valgt.
 
