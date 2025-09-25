@@ -18,9 +18,9 @@ public class SealController : MonoBehaviour
     [SerializeField] private Vector2 endPosition;
 
     [Header("Timings")]
-    private Vector2 nextDelayRange; //Random vente tid før næste pop op
-    private float showDuration; //Tid for at komme op og ned
-    private float duration; //Tiden som sælerne bliver oppe
+    private Vector2 nextDelayRange = new Vector2(0,2); //Random vente tid før næste pop op
+    private float showDuration = 1f; //Tid for at komme op og ned
+    private float duration = 2f; //Tiden som sælerne bliver oppe
 
     [Header("Spawn Rates")]
     [SerializeField] private float standardSealSpawnRate;
@@ -165,6 +165,9 @@ public class SealController : MonoBehaviour
     {
         showDuration = Mathf.Max(0.05f, newShowDuration);
         duration = Mathf.Max(0.05f, newDuration);
-        nextDelayRange = newDelayRange;
+
+        float x = Mathf.Max(0f, newDelayRange.x);
+        float y = Mathf.Max(x + 0.001f, newDelayRange.y);
+        nextDelayRange = new Vector2(x,y);
     }
 }
