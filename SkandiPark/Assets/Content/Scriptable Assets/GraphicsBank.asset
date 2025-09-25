@@ -24,6 +24,7 @@ MonoBehaviour:
   pauseSoundButton: {fileID: 21300000, guid: 1bd3a24b9a0852d459e4b383437c3660, type: 3}
   pauseSoundButtonOff: {fileID: 21300000, guid: abe422ea165cf954784533d71e055d46, type: 3}
   tryAgainButton: {fileID: 21300000, guid: 0294f7697ab307b4a8cc18a7e1d2a834, type: 3}
+  backToMainMenuButton: {fileID: 21300000, guid: 0225d28be15698743b820c36df879690, type: 3}
   playButton: {fileID: 21300000, guid: 75b572f7852898a4d9baa263c5b5b003, type: 3}
   settingsButton: {fileID: 21300000, guid: 455f02213c3193d46aaf35726a54c5fc, type: 3}
   backButton: {fileID: 21300000, guid: 0225d28be15698743b820c36df879690, type: 3}

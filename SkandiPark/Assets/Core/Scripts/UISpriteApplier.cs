@@ -12,6 +12,7 @@ public enum GfxKey
     MainMenuButton, 
     PauseSoundButton,
     TryAgainButton,
+    BackToMainMenuButton,
     PlayButton, 
     SettingsButton, 
     BackButton,
@@ -146,6 +147,7 @@ public class UISpriteApplier : MonoBehaviour
             case GfxKey.PauseSoundButton: return bank.pauseSoundButton;
 
             case GfxKey.TryAgainButton: return bank.tryAgainButton;
+            case GfxKey.BackToMainMenuButton: return bank.backToMainMenuButton;
 
             case GfxKey.PlayButton: return bank.playButton;
             case GfxKey.SettingsButton: return bank.settingsButton;

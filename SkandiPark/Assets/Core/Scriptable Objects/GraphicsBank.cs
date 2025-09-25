@@ -24,6 +24,7 @@ public class GraphicsBank : ScriptableObject
 
     [Header("TryAgainMenu")]
     public Sprite tryAgainButton;
+    public Sprite backToMainMenuButton;
 
     [Header("StartMenu")]
     public Sprite playButton;
