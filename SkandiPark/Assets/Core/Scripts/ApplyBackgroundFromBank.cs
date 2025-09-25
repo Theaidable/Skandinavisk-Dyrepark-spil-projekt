@@ -57,18 +57,18 @@ public class ApplyBackgroundFromBank : MonoBehaviour
             if (targetRenderer && targetRenderer.sharedMaterial == _instance)
             {
                 targetRenderer.sharedMaterial = null;
-            }
 
-        #if UNITY_EDITOR
+                #if UNITY_EDITOR
 
-            if (!Application.isPlaying)
-            {
+                if (!Application.isPlaying)
+                {
+                    DestroyImmediate(_instance);
+                }
+
                 DestroyImmediate(_instance);
+
+                #endif
             }
-
-        #endif
-
-            Destroy(_instance);
 
             _instance = null;
         }
