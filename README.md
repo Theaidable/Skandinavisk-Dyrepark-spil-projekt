@@ -17,13 +17,9 @@ Spillet består af 2 scener:
 ## 2. Kort overblik over UI.
 Hele menusystemet i spillet består af: **StartMenu**, **PauseMenu**, **SettingsMenu**, **TryAgainMenu**.
 Alt er bygget med PNG ikoner (ingen tekst på knapperne).
-MMD kan ændre på udseendet direkte i Unity, f.eks udskiftning af billeder, flytte rundt på knapper eller ændre på farve og størrelse på tekster.
+Du kan ændre på udseendet direkte i Unity, f.eks udskiftning af billeder, flytte rundt på knapper eller ændre på farve og størrelse på tekster.
 Lydknappen kan også få nye ikoner (sound on/off), og tekster som Score/Timer/Slutresultat kan ændres på under Inspector (farve, font, størrelse, placering).
-Selve funktionerne er kodet, så det visuelle er det eneste de behøver at ændre.
-Vores start scene er **MapScene** som er kortet over parken, og spillets scene er **SkandiPark**.
-
-**UI og menusystemet**
-Delen her er ift. brugerfladen i appen - **StartMenu**, **PauseMenu**, **SettingsMenu**, **TryAgainMenu**.
+Selve funktionerne er kodet, så det visuelle er det eneste du behøver at ændre.
 
 **Hvordan UI/Menu er bygget op**
 - **UI Paneler**
@@ -42,7 +38,7 @@ GraphicsBank samler al grafik ét sted, så du kan udskifte udseende uden kode.
 ### Tilføj/organisér sprites (importværktøjet i bunden)
 - **Importér til mappe:** Vælg en undermappe i dropdown -> Map, Background, Objects -> Hole, PolarBear, Seal eller UI -> Buttons.
 - Man kan også importér til mappe ved at klikke på **"Vælg Mappe"** for at bruge stifinder.
-- **"Åbn Mappe" / "Ping i Project"** åbnet mappen i stifinder, eller fremhæver den i Unity's Project-vindue.
+- **"Åbn Mappe" / "Ping i Project"** åbner mappen i stifinder, eller fremhæver den i Unity's Project-vindue.
 - **"Genindlæs Mapper"** bruges hvis du har oprettet/omdøbet mapper, og dropdown'en ikke er opdateret endnu.
 
 Importeren kopierer filen ind i porjektets mappe og giver automatisk et unikt filnavn. Der er ikke noget som bliver overskrevet.
@@ -53,8 +49,8 @@ Importeren kopierer filen ind i porjektets mappe og giver automatisk et unikt fi
 
 ### Hvad kan du ændre?
 **1. Sæl og Isbjørn**
-- Hver figur har to felter -> Alimndeligt udseende og hit-udseende (når de er blevet slået/ramt).
-  - Sælen har felteren **Standard Seal** og **Standard Seal Hit**.
+- Hver figur har to felter -> Almindeligt udseende og hit-udseende (når de er blevet slået/ramt).
+  - Sælen har felterne **Standard Seal** og **Standard Seal Hit**.
   - Isbjørnen har **Polar Bear** og **Polar Bear Hit**.
 
 **2. UI -> InGameOverLay (vises mens spillet kører)**
@@ -121,7 +117,7 @@ I bunden af Inspector-vinduet finder du **"Importér Lyd"**
 - **Pop Up Sfx** -> Når en sæl/isbjørn kommer op ad et hul.
 - **Button Click** -> UI-knappe klikke lyd.
 
-## 4. Prefabs: Redigere huller
+## 5. Prefabs: Redigere huller
 Hullerne er bygget som **prefabs**, så én ændring kan ændre alle huller på samme tid.
 
 ### Hvor finder jeg dem?
@@ -149,13 +145,19 @@ Dobbeltklik på en prefab for at åbne den i **Prefab Mode** og redigere den.
 
 ### Huller i scenen
 - Man kan finde hullerne under ----- Game ---- / SealHoleManager /
-- Man kan ændre placeringen af de nuværende huller ved at klikke på et SealHole, og justér **Transform -> Postion (X/Y)** for at flytte det.
+- Man kan ændre placeringen af de nuværende huller ved at klikke på et SealHole, og justér **Transform -> Position (X/Y)** for at flytte det.
 - Hvis du vil skfite variant, så kan du højreklikke på hullet **-> Prefab -> Select Asset -> SealHole / SealHoleNoIce**.
-- Man kan tilføje flere huller ved at trække et prefab ind i scenen og ændre dens placering.
+- Man kan tilføje flere huller ved at trække et prefab ind i scenen og ændre dens placering. Dog skal man være opmærksom på at man også skal tilføje disse prefabs til listerne inde i DifficultyManager ved Holes og i hvilket level de skal spawne.
 
-## 5. Ændre sværhedsgrad af spillet
-Sværhedsgraden styrer centralt af DifficultyManager (sidder på SealHoleManager i scenen). Manageren bestemmer følgende:
+## 6. Ændre sværhedsgrad af spillet
+DifficultyManager (Sidder på SealHoleManager i scenen) styrer tempo, "hit-vindue" og hvornår ekstra huller aktiveres.
+
+### Hvor finder jeg den?
+- Åbn scenen **SkandiPark** og vælg SealHoleManager i Hierarchy. Man kan nu se DifficultyManager i inspector-vinduet.
+
+Manageren bestemmer følgende:
 - Tempoet -> Hvor hurtigt hullere popper op/ned. Denne variabel er blevet kaldt Base Show Duration.
 - Hvor længe en sæl/isbjørn er oppe. Denne variabel er blevet kaldt Base Stay Duration.
-- Hvor mange huller der er akjtive undervejs i runden. Dette er variablen Base Delay Range, hvilket gør at der går et tilfædigt tal mellem x og y inden den næste spawner, så spawning er mere tilfældigt.
+- Ventetiden mellem hvert hul. Dette er variablen Base Delay Range, hvilket gør at der går et tilfædigt tal mellem x og y inden den næste spawner, så spawning er mere tilfældigt.
 - Der er nogle levels i spillet som øger sværhedsgraden, hvor man kan styre tiden mellem øgning af level via variablen Difficult Increase Interval.
+- I de forskellige levels falder værdier som showDuration og stayDuration og i de senere levels tilføjes flere huller, hvor der gøres brug af listerne **"Holes at Level 0", "Holes at Level 3" og "Holes at Level 4"**
