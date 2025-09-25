@@ -20,6 +20,7 @@ public class GraphicsBank : ScriptableObject
     public Sprite resumeButton;
     public Sprite mainMenuButton;
     public Sprite pauseSoundButton;
+    public Sprite pauseSoundButtonOff;
 
     [Header("TryAgainMenu")]
     public Sprite tryAgainButton;
@@ -31,6 +32,7 @@ public class GraphicsBank : ScriptableObject
 
     [Header("SettingsMenu")]
     public Sprite settingsSoundButton;
+    public Sprite settingsSoundButtonOff;
     public Sprite settingsBackButton;
 
     [Header("Background")]
