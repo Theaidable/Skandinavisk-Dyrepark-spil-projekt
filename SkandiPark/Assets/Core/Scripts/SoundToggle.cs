@@ -13,13 +13,13 @@ public class SoundToggle : MonoBehaviour
     {
         //Vi sørger for at det starter ud korrekt.
         UpdateIcon();
-        AudioListener.pause = !isSoundOn;
+        AudioManager.Instance?.SetMuted(!isSoundOn);
     }
 
     public void ToggleSound()
     {
         isSoundOn = !isSoundOn;
-        AudioListener.pause = !isSoundOn; //Så vi kan slå alt lyd fra/til.
+        AudioManager.Instance?.SetMuted(!isSoundOn);
         UpdateIcon();
     }
 

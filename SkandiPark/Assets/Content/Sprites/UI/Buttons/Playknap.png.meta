@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0225d28be15698743b820c36df879690
+guid: 75b572f7852898a4d9baa263c5b5b003
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7506460795916568845
-    second: f5cf5a60-1fc5-4f75-bbd8-a2812aaa6e4a_0
+      213: 7741088488921211994
+    second: Playknap_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,56 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: f5cf5a60-1fc5-4f75-bbd8-a2812aaa6e4a_0
+      name: Playknap_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 791
-        height: 789
+        width: 675
+        height: 577
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d09c00da25e4c2860800000000000000
-      internalID: 7506460795916568845
+      spriteID: a54a30577fedd6b60800000000000000
+      internalID: 7741088488921211994
       vertices: []
       indices: 
       edges: []
@@ -135,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      f5cf5a60-1fc5-4f75-bbd8-a2812aaa6e4a_0: 7506460795916568845
+      Playknap_0: 7741088488921211994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

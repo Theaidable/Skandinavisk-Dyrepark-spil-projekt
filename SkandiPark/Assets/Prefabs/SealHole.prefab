@@ -192,8 +192,8 @@ MonoBehaviour:
   gfx: {fileID: 11400000, guid: 254228ec7d868684cbee71f5691337e8, type: 2}
   startPosition: {x: 0.1, y: -0.4}
   endPosition: {x: 0.1, y: 0.7}
-  showDuration: 0.5
-  duration: 1
+  showDuration: 1
+  duration: 2
   nextDelayRange: {x: 0, y: 2}
   standardSealSpawnRate: 0.75
   polarbearSpawnRate: 0.25

@@ -10,25 +10,17 @@ public enum SpawnType
 
 public class SealController : MonoBehaviour
 {
-    [Header("Components")]
+    [Header("References")]
     [SerializeField] private GraphicsBank gfx;
-
-    /*
-    [Header("Graphics")]
-    [SerializeField] private Sprite standardSeal;
-    [SerializeField] private Sprite standardSealHit;
-    [SerializeField] private Sprite polarbear;
-    [SerializeField] private Sprite polarBearHit;
-    */
 
     [Header("Positions")]
     [SerializeField] private Vector2 startPosition;
     [SerializeField] private Vector2 endPosition;
 
     [Header("Timings")]
-    [SerializeField] private float showDuration; //Tid for at komme op og ned
-    [SerializeField] private float duration; //Tiden som sælerne bliver oppe
-    [SerializeField] private Vector2 nextDelayRange; //Random vente tid før næste pop op
+    private Vector2 nextDelayRange; //Random vente tid før næste pop op
+    private float showDuration; //Tid for at komme op og ned
+    private float stayDuration; //Tiden som sælerne bliver oppe
 
     [Header("Spawn Rates")]
     [SerializeField] private float standardSealSpawnRate;
@@ -52,7 +44,10 @@ public class SealController : MonoBehaviour
 
     private void OnEnable()
     {
-        _loop = StartCoroutine(ShowHide(startPosition, endPosition));
+        if(_loop == null)
+        {
+            _loop = StartCoroutine(ShowHide(startPosition, endPosition));
+        }
     }
 
     private void OnDisable()
@@ -97,7 +92,7 @@ public class SealController : MonoBehaviour
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
     {
-        while (true) //Skal ændres GameOver == false
+        while (showDuration > 0 && stayDuration > 0)
         {
             float delay = Random.Range(nextDelayRange.x, nextDelayRange.y);
 
@@ -128,7 +123,7 @@ public class SealController : MonoBehaviour
             transform.localPosition = end;
 
             //Wait for duration to pass
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(stayDuration);
 
             //Hide the seal
             elapsed = 0f;
@@ -167,5 +162,15 @@ public class SealController : MonoBehaviour
         }
 
         hittable = true;
+    }
+
+    public void SetTimings(float newShowDuration, float newDuration, Vector2 newDelayRange)
+    {
+        showDuration = newShowDuration;
+        stayDuration = newDuration;
+
+        float x = Mathf.Max(0f, newDelayRange.x);
+        float y = Mathf.Max(x + 0.001f, newDelayRange.y);
+        nextDelayRange = new Vector2(x,y);
     }
 }

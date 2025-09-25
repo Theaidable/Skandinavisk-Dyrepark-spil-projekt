@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,6 +9,8 @@ public class AudioManager : MonoBehaviour
 
     private AudioSource music;
     private AudioSource sfx;
+
+    private bool muted;
 
     private void Awake()
     {
@@ -30,9 +33,17 @@ public class AudioManager : MonoBehaviour
         sfx.playOnAwake = false;
     }
 
+    public void SetMuted(bool mute)
+    {
+        muted = mute;
+
+        music.mute = mute;
+        sfx.mute = mute;
+    }
+
     public void PlayBackgroundMusic()
     {
-        if(bank == false || bank.backgroundMusic == false)
+        if(bank == false || bank.backgroundMusic == false || muted == true)
         {
             return;
         }
@@ -53,7 +64,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySfx(AudioClip clip, float? volume = null)
     {
-        if(clip == false)
+        if(clip == false || muted == true)
         {
             return;
         }
