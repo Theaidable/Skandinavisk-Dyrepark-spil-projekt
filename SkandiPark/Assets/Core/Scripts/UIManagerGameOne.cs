@@ -34,6 +34,8 @@ public class UIManagerGameOne : MonoBehaviour
     public bool IsPaused => paused;
     public bool IsEnded => ended;
 
+    public float Elapsed => timeLimitSeconds - timeLeft;
+
     private void Awake()
     {
         _inputLocked = false;
