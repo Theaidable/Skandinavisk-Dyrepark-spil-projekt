@@ -7,11 +7,11 @@ I denne README fil vil du finde en kort guide til at arbejde videre med "Whack A
 
 ## 1. Scener
 Spillet består af 2 scener:
-- MapMenu -> Dette er spillets hovedmenu, hvorfra man starter spillet. I vores tilfælde starter man fra Skandinavisk Dyreparks kort over parken. Hvis man spiller spillet, så skal man klikke på logoet med isbjørnen for at skifte scene til selve spillet.
+- MapScene -> Dette er spillets hovedmenu, hvorfra man starter spillet. I vores tilfælde starter man fra Skandinavisk Dyreparks kort over parken. Hvis man spiller spillet, så skal man klikke på logoet med isbjørnen for at skifte scene til selve spillet.
 - SkandiPark -> Dette er scenen med selve "gameplayet".
 ### Sådan åbner/skifter du scene
 1. Åbn Project-vinduet og gå til **Assets/Scenes/**.
-2. **Dobbeltklik** på **MapMenu** eller **SkandiPark** for at åbne scenen.
+2. **Dobbeltklik** på **MapScene** eller **SkandiPark** for at åbne scenen.
 3. Tryk **Play** for at køre den aktuelle scene.
 
 ## 2. Kort overblik over UI.
@@ -32,7 +32,7 @@ Selve funktionerne er kodet, så det visuelle er det eneste du behøver at ændr
 GraphicsBank samler al grafik ét sted, så du kan udskifte udseende uden kode.
 
 ### Hvor ligger den?
-- Åbn **Assets/Content/Scritable Assets/** og klik på GraphicsBank.
+- Åbn **Assets/Content/Scriptable Assets/** og klik på GraphicsBank.
 - Når asset'et er markeret, kan du ændre felter i **Inspector-vinduet** til højre.
 
 ### Tilføj/organisér sprites (importværktøjet i bunden)
@@ -41,7 +41,7 @@ GraphicsBank samler al grafik ét sted, så du kan udskifte udseende uden kode.
 - **"Åbn Mappe" / "Ping i Project"** åbner mappen i stifinder, eller fremhæver den i Unity's Project-vindue.
 - **"Genindlæs Mapper"** bruges hvis du har oprettet/omdøbet mapper, og dropdown'en ikke er opdateret endnu.
 
-Importeren kopierer filen ind i porjektets mappe og giver automatisk et unikt filnavn. Der er ikke noget som bliver overskrevet.
+Importeren kopierer filen ind i projektets mappe og giver automatisk et unikt filnavn. Der er ikke noget som bliver overskrevet.
 
 ### Skift sprites på felterne
 - Træk et **PNG, JPG eller JPEG** direkte ind på feltet, eller klik den lille cirkel til højre i feltet for at vælge et eksisterende asset.
@@ -81,7 +81,7 @@ Importeren kopierer filen ind i porjektets mappe og giver automatisk et unikt fi
 Alle knapper som er lavet bruger en simpel PNG med et flat design, hvor der er kun brugt billeder, ingen tekst.
 
 **7. Background**
-- **Background Texture** -> Udskfiter selve billedet på baggrundens materiale.
+- **Background Texture** -> Udskifter selve billedet på baggrundens materiale.
 
 Der er nogle knapper som har samme funktion, hvor samme sprite kan bruges, men det er opsat sådan at man har muligheden for at have forskelligt udseende til forskellige menuer hvis det er noget man har lyst til.
 
@@ -146,7 +146,7 @@ Dobbeltklik på en prefab for at åbne den i **Prefab Mode** og redigere den.
 ### Huller i scenen
 - Man kan finde hullerne under ----- Game ---- / SealHoleManager /
 - Man kan ændre placeringen af de nuværende huller ved at klikke på et SealHole, og justér **Transform -> Position (X/Y)** for at flytte det.
-- Hvis du vil skfite variant, så kan du højreklikke på hullet **-> Prefab -> Select Asset -> SealHole / SealHoleNoIce**.
+- Hvis du vil skifte variant, så kan du højreklikke på hullet **-> Prefab -> Select Asset -> SealHole / SealHoleNoIce**.
 - Man kan tilføje flere huller ved at trække et prefab ind i scenen og ændre dens placering. Dog skal man være opmærksom på at man også skal tilføje disse prefabs til listerne inde i DifficultyManager ved Holes og i hvilket level de skal spawne.
 
 ## 6. Ændre sværhedsgrad af spillet
@@ -156,7 +156,7 @@ DifficultyManager (Sidder på SealHoleManager i scenen) styrer tempo, "hit-vindu
 - Åbn scenen **SkandiPark** og vælg SealHoleManager i Hierarchy. Man kan nu se DifficultyManager i inspector-vinduet.
 
 Manageren bestemmer følgende:
-- Tempoet -> Hvor hurtigt hullere popper op/ned. Denne variabel er blevet kaldt Base Show Duration.
+- Tempoet -> Hvor hurtigt huller popper op/ned. Denne variabel er blevet kaldt Base Show Duration.
 - Hvor længe en sæl/isbjørn er oppe. Denne variabel er blevet kaldt Base Stay Duration.
 - Ventetiden mellem hvert hul. Dette er variablen Base Delay Range, hvilket gør at der går et tilfædigt tal mellem x og y inden den næste spawner, så spawning er mere tilfældigt.
 - Der er nogle levels i spillet som øger sværhedsgraden, hvor man kan styre tiden mellem øgning af level via variablen Difficult Increase Interval.
