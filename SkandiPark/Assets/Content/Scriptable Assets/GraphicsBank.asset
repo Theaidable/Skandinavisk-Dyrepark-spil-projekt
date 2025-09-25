@@ -16,3 +16,16 @@ MonoBehaviour:
   standardSealHit: {fileID: 1436501906964270941, guid: c21fd4aec7af6e947b871247619e418f, type: 3}
   polarBear: {fileID: -8349362767631358238, guid: fe6bb087de2c11b4db5b51139bdea876, type: 3}
   polarBearHit: {fileID: -5462502025361819616, guid: ea8254c395399b54cba9cacd86b2183f, type: 3}
+  scoreFramer: {fileID: 4234440272032029257, guid: 8fa3033e315043549bde6fd0ec40d5da, type: 3}
+  timerFramer: {fileID: -6071233460313169251, guid: 36e96a19c6f37b348b6e3ba0fc1ccb01, type: 3}
+  pauseButton: {fileID: 21300000, guid: ada5423bc7eda9f42bd379a7fb1c08c9, type: 3}
+  resumeButton: {fileID: 21300000, guid: 75b572f7852898a4d9baa263c5b5b003, type: 3}
+  mainMenuButton: {fileID: 21300000, guid: 0225d28be15698743b820c36df879690, type: 3}
+  pauseSoundButton: {fileID: 21300000, guid: 1bd3a24b9a0852d459e4b383437c3660, type: 3}
+  tryAgainButton: {fileID: 21300000, guid: 0294f7697ab307b4a8cc18a7e1d2a834, type: 3}
+  playButton: {fileID: 21300000, guid: 75b572f7852898a4d9baa263c5b5b003, type: 3}
+  settingsButton: {fileID: 21300000, guid: 455f02213c3193d46aaf35726a54c5fc, type: 3}
+  backButton: {fileID: 21300000, guid: 0225d28be15698743b820c36df879690, type: 3}
+  settingsSoundButton: {fileID: 21300000, guid: 1bd3a24b9a0852d459e4b383437c3660, type: 3}
+  settingsBackButton: {fileID: 21300000, guid: aa8b2a2d063d7d34ca372485e96b1bf2, type: 3}
+  backgroundTexture: {fileID: 2800000, guid: 854942fcbdb5b374886cce706719ac9f, type: 3}
