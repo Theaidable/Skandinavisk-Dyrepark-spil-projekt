@@ -5,15 +5,20 @@ public class DifficultyManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private UIManagerGameOne _ui;
-    [SerializeField] private SealController _sealController;
+    [SerializeField] private SealController[] _sealControllers;
 
     [Header("Round Settings")]
     [SerializeField] private float difficultIncreaseInterval = 15f;
 
-    [Header("Timings")]
-    [SerializeField] private float newShowDuration;
-    [SerializeField] private float newStayDuration;
-    [SerializeField] private Vector2 newDelayRange;
+    [Header("Base Timings")]
+    [SerializeField] private float baseShowDuration;
+    [SerializeField] private float baseStayDuration;
+    [SerializeField] private Vector2 baseDelayRange;
+
+    [Header("Runtime Timings")]
+    [SerializeField] private float currentShowDuration;
+    [SerializeField] private float currentStayDuration;
+    [SerializeField] private Vector2 currentDelayRange;
 
     [Header("Holes")]
     [SerializeField] private GameObject[] holes;
@@ -21,7 +26,6 @@ public class DifficultyManager : MonoBehaviour
     [SerializeField] private GameObject[] holesAtLevel3;
     [SerializeField] private GameObject[] holesAtLevel4;
 
-    private int roundSeconds;
     private int currentLevel = -1;
 
     private void Awake()
@@ -31,9 +35,9 @@ public class DifficultyManager : MonoBehaviour
             _ui = FindFirstObjectByType<UIManagerGameOne>();
         }
 
-        if(_sealController == null)
+        if(_sealControllers == null)
         {
-            _sealController = GetComponentInChildren<SealController>(true);
+            _sealControllers = GetComponent<SealController[]>();
         }
 
         foreach (GameObject obj in holes)
@@ -41,18 +45,24 @@ public class DifficultyManager : MonoBehaviour
             obj.SetActive(false);
         }
 
-        roundSeconds = _ui.timeLimitSeconds;
+        currentShowDuration = baseShowDuration;
+        currentStayDuration = baseStayDuration;
+        currentDelayRange = baseDelayRange;
+
+        foreach(var sealController in _sealControllers)
+        {
+            sealController.SetTimings(currentShowDuration, currentStayDuration, currentDelayRange);
+        }
     }
 
     private void Start()
     {
-        _sealController.SetTimings(newShowDuration, newStayDuration, newDelayRange);
-        currentLevel = 0;
-
-        foreach(GameObject obj in holesAtLevel0)
+        foreach (GameObject obj in holesAtLevel0)
         {
             obj.SetActive(true);
         }
+
+        currentLevel = 0;
     }
 
     private void Update()
@@ -61,13 +71,29 @@ public class DifficultyManager : MonoBehaviour
         {
             if(currentLevel < 1 && _ui.Elapsed >= difficultIncreaseInterval)
             {
-                _sealController.SetTimings(newShowDuration * 0.75f, newStayDuration * 0.75f, newDelayRange);
+                currentShowDuration = baseShowDuration * 0.75f;
+                currentStayDuration = baseStayDuration * 0.75f;
+                currentDelayRange = baseDelayRange;
+
+                foreach (var sealController in _sealControllers)
+                {
+                    sealController.SetTimings(currentShowDuration, currentStayDuration, currentDelayRange);
+                }
+
                 currentLevel = 1;
             }
 
             if(currentLevel < 2 && _ui.Elapsed >= difficultIncreaseInterval * 2)
             {
-                _sealController.SetTimings(newShowDuration * 0.5f, newStayDuration * 0.5f, newDelayRange);
+                currentShowDuration = baseShowDuration * 0.5f;
+                currentStayDuration = baseStayDuration * 0.5f;
+                currentDelayRange = baseDelayRange;
+
+                foreach (var sealController in _sealControllers)
+                {
+                    sealController.SetTimings(currentShowDuration, currentStayDuration, currentDelayRange);
+                }
+
                 currentLevel = 2;
             }
             

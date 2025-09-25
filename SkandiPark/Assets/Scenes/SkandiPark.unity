@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &5690646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+  m_PrefabInstance: {fileID: 2050925705}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &15969853
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +788,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 260555683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &298000187 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+  m_PrefabInstance: {fileID: 2147451393}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &376362957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,6 +1203,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8050217018511468948, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
   m_PrefabInstance: {fileID: 1582339778}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &631944619 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+  m_PrefabInstance: {fileID: 257586206}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &652680994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,6 +2174,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1182774098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+  m_PrefabInstance: {fileID: 751417088430328367}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1309322956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2460,11 +2504,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ui: {fileID: 1144249365}
-  _sealController: {fileID: 946148275}
+  _sealControllers:
+  - {fileID: 1182774098}
+  - {fileID: 631944619}
+  - {fileID: 946148275}
+  - {fileID: 298000187}
+  - {fileID: 1985593943}
+  - {fileID: 5690646}
   difficultIncreaseInterval: 15
-  newShowDuration: 1
-  newStayDuration: 2
-  newDelayRange: {x: 0, y: 2}
+  baseShowDuration: 1
+  baseStayDuration: 2
+  baseDelayRange: {x: 0, y: 2}
+  currentShowDuration: 0
+  currentStayDuration: 0
+  currentDelayRange: {x: 0, y: 0}
   holes:
   - {fileID: 1939834332}
   - {fileID: 1112105890}
@@ -3290,6 +3343,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8050217018511468948, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
   m_PrefabInstance: {fileID: 751417088430328367}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1985593943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8303775996065495462, guid: 67d63358b484b4848add7baaa755b52f, type: 3}
+  m_PrefabInstance: {fileID: 1582339778}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae7773acb6342204f9dfabde4199e896, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2036991567
 GameObject:
   m_ObjectHideFlags: 0

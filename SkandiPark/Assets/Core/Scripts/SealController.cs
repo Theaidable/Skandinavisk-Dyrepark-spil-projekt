@@ -18,9 +18,9 @@ public class SealController : MonoBehaviour
     [SerializeField] private Vector2 endPosition;
 
     [Header("Timings")]
-    private Vector2 nextDelayRange = new Vector2(0,2); //Random vente tid før næste pop op
-    private float showDuration = 1f; //Tid for at komme op og ned
-    private float duration = 2f; //Tiden som sælerne bliver oppe
+    private Vector2 nextDelayRange; //Random vente tid før næste pop op
+    private float showDuration; //Tid for at komme op og ned
+    private float stayDuration; //Tiden som sælerne bliver oppe
 
     [Header("Spawn Rates")]
     [SerializeField] private float standardSealSpawnRate;
@@ -44,7 +44,10 @@ public class SealController : MonoBehaviour
 
     private void OnEnable()
     {
-        _loop = StartCoroutine(ShowHide(startPosition, endPosition));
+        if(_loop == null)
+        {
+            _loop = StartCoroutine(ShowHide(startPosition, endPosition));
+        }
     }
 
     private void OnDisable()
@@ -89,7 +92,7 @@ public class SealController : MonoBehaviour
 
     private IEnumerator ShowHide(Vector2 start, Vector2 end)
     {
-        while (true) //Skal ændres GameOver == false
+        while (showDuration > 0 && stayDuration > 0)
         {
             float delay = Random.Range(nextDelayRange.x, nextDelayRange.y);
 
@@ -120,7 +123,7 @@ public class SealController : MonoBehaviour
             transform.localPosition = end;
 
             //Wait for duration to pass
-            yield return new WaitForSeconds(duration);
+            yield return new WaitForSeconds(stayDuration);
 
             //Hide the seal
             elapsed = 0f;
@@ -163,8 +166,8 @@ public class SealController : MonoBehaviour
 
     public void SetTimings(float newShowDuration, float newDuration, Vector2 newDelayRange)
     {
-        showDuration = Mathf.Max(0.05f, newShowDuration);
-        duration = Mathf.Max(0.05f, newDuration);
+        showDuration = newShowDuration;
+        stayDuration = newDuration;
 
         float x = Mathf.Max(0f, newDelayRange.x);
         float y = Mathf.Max(x + 0.001f, newDelayRange.y);
